@@ -1,0 +1,231 @@
+body {
+    background-color: darkgray;
+    /* disisni saya hanya menambahkan bacground warna saja
+    t-tapi keknya di tambahin animasi anime bagus*/
+}
+
+section {
+    padding-top: 128px;
+    position: relative;
+}
+
+section::before {
+    z-index: -1;
+    content: '';
+    font-size: 72px;
+    color: grey;
+    /* ini tuh kalo ga salah di bag */
+    opacity: 0.25;
+    /* untuk mengatur opasitas object tersebut atau div nya lahh */
+    position: absolute;
+    font-weight: 700;
+    /* ini buat nentuin tinggi font */
+    top: 20px;
+    /* top buat atas bukan si?:( */
+    left: -30px;
+}
+
+.btn-button {
+    border: 3px solid black;
+    border-radius: 24px;
+    /* ini gatau cara ngejelasinnya tapii border radius itu 
+    fungsinya buat mengatur sudut border, jadi supaya gak ada sudutnya gitu (my opinion)
+ */
+}
+
+.btn.button:hover, .btn.button.active {
+    border: 3px solid black;
+    /* mengatur ketebalan border dan warna bordernyaa */
+    background-color: black;
+    /* ini buat latar belakang bagian di atas */
+    color: white;
+}
+
+.navbar {
+    /* ini akan berpengaruh pada bacground color bagian navbar web 
+    yang kita buat gaiss */
+    background-color: white;
+    /* ini warna background nya */
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+    /* shadow, in buat nentuin warna bayangan nya */
+}
+
+.home h1 {
+    font-size: 72px;
+}
+
+.home h3 {
+    font-size: 48px;
+    /* ukuran fonttttt */
+}
+
+.home img {
+    width: 100%;
+    /* lebarnya font */
+}
+
+.home .arrow img {
+    width: 60px;
+}
+
+#arrow {
+    animation: 2s upDown infinite;
+    /* ini tuh ya Allahhh dah lama nyariin fungsinya tu ngaruh dibagian mana
+    ehhhh, ternyata dibagian yang arrow.svg toh, jadi fungsinya tuh supaya itu icon 
+    arrow jadi animasi naik turun, kalo kita klik itu nanti bakal ke
+    bagian yang selanjutnya gituuu. anjayy:D 
+    boleh dicoba:3 */
+}
+
+.about::before {
+    content: 'About';
+    /* yang ini pokoknya buat kata About di bagian navbar */
+}
+
+.about-exp-item {
+    margin-top: 32px;
+    /* untuk ngatur margin atass */
+}
+
+.about-exp-item-header {
+    display: flex;
+    align-items: center;
+    /* setau saya align items itu posisi suatu item dalam html
+    jika kita memilih centeer maka yang akan terjadi adalah
+    item tersebut akan berubah menjaadi rata tengah */
+    justify-content: space-between;
+}
+
+.about-exp-item-detail {
+    display: none;
+}
+
+.work::before {
+    content: 'Work';
+}
+
+.work-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "work-1 work-2" "work-3 work-3";
+    gap: 16px;
+}
+
+.work-img img {
+    width: 100%;
+    /* mengatur lebar */
+}
+
+.work-img-item {
+    position: relative;
+    /* ini akan mengatur posisi dalam div yang kita tuju */
+}
+
+.work-img-item:hover::after{
+    content: '';
+    width: 100%;
+    /* width berfungsi mengatur lebar pada sebuah objek di html
+    misalnya foto,video, atu yang lainnya */
+    height: 100%;
+    /* ini berfungsi mengatur tinggi suatu object di html */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    /* warna yang diunakan dalam div tersebut */
+    display: flex;
+    align-items: center;
+    /* jika kita menggunakan ini maka item yang didalam div
+    tersebut akan menjadi rata tengah */
+    justify-content: center;
+    /* content akan menjadi rata tengah */
+    font-weight: 500;
+    /* ini fungsinya untuk mengatur tinggi font */
+    font-size: 24px;
+    /* kalau yang ini fungsinya untuk mengatur ukuran */
+}
+
+#work-1 {
+    grid-area: work-1;
+}
+
+#work-1:hover::after {
+    content: 'Web Project';
+    /* ini berpengaruh pada bagian foto di work
+    jika kita mengarahkan kursor kita ke arah foto tersebut
+    maka akan tampil tlisan 'Web project' latar hitam transparan */
+
+ }
+
+#work-2 {
+    grid-area: work-2;
+}
+
+#work-2:hover::after {
+    content: 'Software Project';
+    /* ini berpengaruh pada bagian foto di work
+    jika kita mengarahkan kursor kita ke arah foto tersebut
+    maka akan tampil tlisan 'Software project' latar hitam transparan */
+}
+
+#work-3 {
+    grid-area: work-3;
+}
+
+#work-3:hover::after {
+    content: 'Software Project';
+    /* ini berpengaruh pada bagian foto di work
+    jika kita mengarahkan kursor kita ke arah foto tersebut
+    maka akan tampil tlisan 'Software project' latar hitam transparan */
+}
+
+.contact {
+    /* ini bakal ngaruh ke bagian contact */
+    padding-bottom: 128px;
+}
+
+.contact::before {
+    content: 'Contact';
+}
+
+.contact-form {
+    border: 1px solid black;
+    /* ini fungsinya buat mengatur ketebalan border kalo gak salah
+    terus solid black itu adalah warna dari border tersebut */
+    padding: 64px 32px;
+}
+
+.form-label {
+    font-weight: 700;
+    /* mengatur ketinggian sebuah font atau tulisan */
+}
+
+@media only screen and (max-width: 768px) {
+    .home img {
+        width: 50%;
+    }
+    
+}
+
+@media only screen and (max-width: 576px) {
+    section::before {
+        left: -10px;
+        font-size: 64px;
+        /* mengatur ukuran tulisan */
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
