@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- html adalah sebuah bahasa pemrograman yang digunakan
+    untuk membuat  sebuah halaman web dan menampilkan berbagai
+    informasi dalam sebuah browser internet -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <!-- ini kerangka bagian navbar -->
+        <div class="container">
+            <!-- fungsi div biasanya untuk mengelompokan elemen
+                atau tag-tag agar menjadi suatu grup. tag div ini juga sering
+                digunakan untuk mendefinisikan id atau class dari css.fungsi div pada html lainnya yang
+                oleh para programmer adalah untuk membatasi bagian satu dengan 
+                bagian lainnya. -->
+            <a class="navbar-brand fs-4 fw-bold" href="#">Desi Lisnawati</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">   
+                <!-- penulisan div id itu pake '#' sedangkan kalo class '.' -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <!-- jika kita mengklik tulisan home di navbar maka kita
+                             akan beralih ke bagian yang di tuju -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="home container">
+        <div class="row d-flex align-items-center">
+            <div class="col-8">
+                <h3 class="fw-semibold">Hi! I am</h3>
+                <h1 class="fw-bold">Desi Lisnawati</h1>
+                <p>I am software engineer based in Indonesia</p>
+                <a class="btn button" href="potrait.png" download>Resume</a>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
+                <img src="female1-512.png" alt="Potrait">
+            </div>
+        </div>
+        <a href="#about" class="text-decoration-none arrow w-100 d-flex align-items-center flex-column mt-5">
+            <div class="text-dark">More Info</div>
+            <img id="arrow" class="mt-2" src="arrow.svg" alt="arrow icon">
+        </a>
+    </section>
+    <section id="about" class="about container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repudiandae? Odit cupiditate cumque adipisci sit mollitia, expedita sunt iusto dolorem consequuntur quod ab cum provident atque veritatis autem vel quisquam!</p>
+        <div class="about-exp">
+            <div class="about-exp-item">
+                <div class="about-exp-item-header">
+                    <div>
+                        <h5>Software Engineer</h5>
+                        <p>Coding studio (2021-now)</p>
+                    </div>
+                    <button class="btn-button" onclick="toggleDetail(event)">More Info</button>
+                </div>
+                <p style="color: white; font-family: serif; animation: 2s upDown infinite;" class="about-exp-item-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos officiis repellendus autem recusandae ab repudiandae ut atque quidem rem voluptatibus adipisci ipsam cupiditate, impedit similique nam dicta pariatur. Unde?</p>
+            </div>
+            <div class="about-exp-item">
+                <div class="about-exp-item-header">
+                    <div>
+                        <h5>Software Engineer</h5>
+                        <p>Coding studio (2021-now)</p>
+                    </div>
+                    <button class="btn-button" onclick="toggleDetail(event)">More Info</button>
+                </div>
+                <p style="color: white; font-family: serif; animation: 2s upDown infinite;" class="about-exp-item-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos officiis repellendus autem recusandae ab repudiandae ut atque quidem rem voluptatibus adipisci ipsam cupiditate, impedit similique nam dicta pariatur. Unde?</p>
+            </div>
+            <div class="about-exp-item">
+                <div class="about-exp-item-header">
+                    <div>
+                        <h5>Software Engineer</h5>
+                        <p>Coding studio (2021-now)</p>
+                    </div>
+                    <button class="btn-button" onclick="toggleDetail(event)">More Info</button>
+                </div>
+                <p style="color: white; font-family: serif; animation: 2s upDown infinite;" class="about-exp-item-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos officiis repellendus autem recusandae ab repudiandae ut atque quidem rem voluptatibus adipisci ipsam cupiditate, impedit similique nam dicta pariatur. Unde?</p>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="work container">
+        <div class="row d-flex align-items-center gap-5">
+            <div class="col-12 col-md-5">
+                <p style="font-size: 18px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit ipsum architecto illo pariatur veritatis quia atque ipsam, quas laboriosam nam iusto? Dolor, rerum? Autem quaerat inventore quibusdam laborum! Soluta.</p>
+            </div>
+            <div class="col-12 col-md-6 work-img">
+                <div id="work-1" class="work-img-item">
+                    <img src="work-1.png" alt="work 1">
+                </div>
+                <div id="work-2" class="work-img-item">
+                    <img src="work-2.png" alt="work 2">
+                </div>
+                <div id="work-3" class="work-img-item">
+                    <img src="work-3.png" alt="work 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact container">
+        <div class="row d-flex align-items-center gap-5">
+            <div class="col-12 col-lg-6">
+                <p style="font-size: 18px;
+                          position: initial;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sit ea architecto animi dolorem quidem recusandae rerum eveniet, cupiditate nemo, optio nesciunt. Exercitationem expedita aperiam neque quos quisquam ipsam repellat.</p>
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <img class="w-25" src="Facebook.svg" alt="Facebook icon">
+                        <p class="mb-0 ms-2">Desi Lisnawati</p>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <img class="w-25" src="Instagram.svg" alt="Instagram icon">
+                        <p class="mb-0 ms-2">@Desi Lisnawati</p>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <img class="w-25" src="Twitter.svg" alt="Twitter icon">
+                        <p class="mb-0 ms-2">@Desi Lisnawati</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <form class="contact-form" onsubmit="onFormSubmit(event)" style="background-color: pink; border-radius: 40px;">
+                    <div class="mb-3">
+                        <label for="inp_email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="inp_email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inp_subject" class="form-label">Subject</label>
+                        <input type="email" class="form-control" id="inp_subject" placeholder="Your Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inp_message" class="form-label">Message</label>
+                        <input type="email" class="form-control" id="inp_message" placeholder="Your Message" required>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <button type="submit" class="btn button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.js"></script>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
